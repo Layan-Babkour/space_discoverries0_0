@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" >
+  <script src="script.js"></script>
+  <title>Explore Space and Plants</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.3);
+      text-align: center;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #00ffcc;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00cc99;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a id="homeLink" href="index.html">Home</a>
+    <div class="nav-right">
+      <div class="dropdown">
+        <select id="pageSelect" onchange="redirectToPage()">
+          <option>walkthrogh</option>
+          <option value="vid.html">Space Video</option>
+          <option value="earth.html">Earth</option> 
+          <option value="satellite.html">Satellite</option>
+          <option value="Astronaut.html">Astronaut</option>
+          <option value="star.html">Stars Above</option>
+          <option value="feedback.html">Feedback & Insight</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Space Discoveries!</h1>
+    <p>Discover the wonders of space and the beauty of nature. Learn about our Space and explore how life on Earth thrives.</p>
+  </div>
+</body>
+</html>

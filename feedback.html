@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the Stars</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" >
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #111;
+      color: #fff;
+    }
+
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.3);
+      text-align: center;
+      width: 800px;
+      height: 400px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: #00ffcc;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #00cc99;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.7);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 2px solid #00ffcc;
+      background-color: #111;
+      color: #00ffcc;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    .thank-you-message {
+      display: none;
+      color: #00ffcc;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a id="homeLink" href="index.html">Home</a>
+    <div class="nav-right">
+      <div class="dropdown">
+        <select id="pageSelect" onchange="redirectToPage()">
+          <option>walkthrogh</option>
+          <option value="vid.html">Space Video</option>
+          <option value="earth.html">Earth</option> 
+          <option value="satellite.html">Satellite</option>
+          <option value="Astronaut.html">Astronaut</option>
+          <option value="star.html">Stars Above</option>
+          <option value="feedback.html">Feedback & Insight</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Please fill</h1>
+
+    <form id="commentForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Comment" rows="4" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <p class="thank-you-message" id="thankYouMessage">Thank you for visiting our website!</p>
+    <button class="btn" id="backBtn">Back</button>
+  </div>
+
+  <script>
+    const mainContent = document.querySelector('.container');
+    const backBtn = document.getElementById('backBtn');
+    const commentForm = document.getElementById('commentForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    backBtn.style.display = 'none'; 
+
+    backBtn.addEventListener('click', function() {
+      mainContent.style.display = 'none'; 
+      backBtn.style.display = 'none'; 
+    });
+
+    commentForm.addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      thankYouMessage.style.display = 'block'; 
+      commentForm.reset(); 
+    });
+  </script>
+
+</body>
+</html>
+

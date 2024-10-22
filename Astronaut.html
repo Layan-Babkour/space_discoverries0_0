@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" >
+    <title>astro</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('image/astro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00ffcc;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .content a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .content a:hover {
+            text-shadow: 0 0 8px #00ffcc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a id="homeLink" href="index.html">Home</a>
+        <div class="nav-right">
+            <div class="dropdown">
+                <select id="pageSelect" onchange="redirectToPage()">
+                    <option>walkthrogh</option>
+                    <option value="vid.html">Space Video</option>
+                    <option value="earth.html">Earth</option> 
+                    <option value="satellite.html">Satellite</option>
+                    <option value="Astronaut.html">Astronaut</option>
+                    <option value="star.html">Stars Above</option>
+                    <option value="feedback.html">Feedback & Insight</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="content">
+            <h1 class="h11">What's it like Being an astronaut</h1>
+            <p>Being an astronaut is intense and awe-inspiring. Training involves physical conditioning, simulations, and technical learning. Launching into space is thrilling, with powerful G-forces and weightlessness. Life on the spacecraft is structured, focused on experiments and maintenance. Seeing Earth from space is breathtaking, and spacewalks are exciting but risky.</p>
+            <p>If you want to know how is the first Arab astronaut, <a href="astrooo.html" target="_blank">PRESS HERE!</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

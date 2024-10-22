@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <title>Earth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(13, 11, 11);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+
+        #wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 100px;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .content {
+            text-align: left;
+            max-width: 500px;
+        }
+
+        .content h1 {
+            color: #00ffcc;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 20px 0;
+        }
+
+        .planet-image img {
+            height: 400px;
+            width: 400px;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a id="homeLink" href="index.html">Home</a>
+        <div class="nav-right">
+            <div class="dropdown">
+                <select id="pageSelect" onchange="redirectToPage()">
+                    <option>walkthrogh</option>
+                    <option value="vid.html">Space Video</option>
+                    <option value="earth.html">Earth</option> 
+                    <option value="satellite.html">Satellite</option>
+                    <option value="Astronaut.html">Astronaut </option>
+                    <option value="star.html">Stars Above</option>
+                    <option value="feedback.html">Feedback & Insight</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="content">
+            <h1>Earth</h1>
+            <p>Earth is the third planet from the Sun and the only known place with life. 
+                It orbits the Sun every 365 days and is about 4.5 billion years old.
+                Its atmosphere, mostly nitrogen and oxygen,
+                protects life by regulating temperature and blocking harmful radiation.</p>
+
+            <p>Around 71% of Earth's surface is covered by water, mainly oceans, essential for life.
+                The planet has diverse climates, from warm tropics to icy poles.
+                While greenhouse gases keep Earth warm enough for life, human activity is causing climate change,
+                affecting natural systems. Despite challenges, Earth remains unique in supporting life.</p>
+        </div>
+        <div class="planet-image">
+            <img id="eth" src="image/earth.jpg" alt="Earth Image">  
+        </div>
+    </div>
+
+</body>
+</html>

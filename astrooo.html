@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Arab Muslim Astronaut</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+    
+        #wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .image-container {
+            max-width: 40%;
+            margin-right: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .content {
+            max-width: 60%;
+        }
+
+        .content h1 {
+            color: #00ffcc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+        table, th, td {
+            border: 2px solid #00ffcc;
+            padding: 10px;
+        }
+
+        th, td {
+            background-color: black;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a id="homeLink" href="index.html">Home</a>
+        <div class="nav-right">
+            <div class="dropdown">
+                <select id="pageSelect" onchange="redirectToPage()">
+                    <option>walkthrogh</option>
+                    <option value="vid.html">Space Video</option>
+                    <option value="earth.html">Earth</option>
+                    <option value="satellite.html">Satellite</option>
+                    <option value="Astronaut.html">Astronaut</option>
+                    <option value="star.html">Stars Above</option>
+                    <option value="feedback.html">Feedback & Insight</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="image-container">
+            <img src="image/prinse.jpg" alt="Prince Sultan Bin Salman">
+        </div>
+        
+        <div class="content">
+            <h1>First Arab Muslim Astronaut</h1>
+            <p>The first Muslim, and the first member of a royal family to travel into space.
+                Prince Sultan bin Salman Al Saud is a Saudi royal, former astronaut, and government official.
+                He became the first Arab, Muslim, and member of royalty to fly in space during the 1985 NASA Space Shuttle mission STS-51-G.
+                He holds a degree in Communications and earned a PhD in History. Prince Sultan also served as the head of the Saudi Space Commission and was previously
+                the president of the Saudi Commission for Tourism and National Heritage.
+                His contributions to space exploration and heritage preservation are well-recognized.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Born</th>
+                    <td>27 June 1956 (age 68)</td>
+                </tr>
+                <tr>
+                    <th>Nationality</th>
+                    <td>Saudi Arabian</td>
+                </tr>
+                <tr>
+                    <th>Occupation</th>
+                    <td>Chairman of the Board of Directors of the Saudi Space Commission</td>
+                </tr>
+                <tr>
+                    <th>Parents</th>
+                    <td>Salman of Saudi Arabia (father), Sultana bint Turki Al Sudairi (mother)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

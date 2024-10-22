@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the Stars</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" >
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+      color: #fff;
+      overflow: hidden;
+    }
+
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.3);
+      text-align: center;
+      max-width: 1200px;
+      transition: transform 0.5s ease; /* Add smooth transition for scaling */
+      position: relative;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-content {
+      flex: 1;
+      padding: 20px;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content {
+      flex: 9;
+      text-align: center;
+      display: none;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+      text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #111;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00cc99;
+      box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.7);
+    }
+
+    dl {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    dt {
+      color: #00ffcc;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    dd {
+      margin: 0 0 20px 20px;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <nav>
+    <a id="homeLink" href="index.html">Home</a>
+    <div class="dropdown">
+      <select id="pageSelect" onchange="redirectToPage()">
+        <option>walkthrogh</option>
+        <option value="vid.html">Space Video</option>
+        <option value="earth.html">Earth</option>
+        <option value="satellite.html">Satellite</option>
+        <option value="Astronaut.html">Astronaut</option>
+        <option value="star.html">Stars Above</option>
+        <option value="feedback.html">Feedback & Insight</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="container" id="container">
+    <div class="left-content">
+      <h2 id="learnHeader">Learn About Stars</h2>
+      <p id="learnText">Discover the wonders of the universe and the mysteries of stars.</p>
+      <button class="btn" id="exploreBtn">Explore More</button>
+    </div>
+
+    <div class="main-content" id="mainContent">
+      <h1>Explore the Stars</h1>
+
+      <dl>
+        <dt>1. Star Formation</dt>
+        <dd>
+          <ol>
+            <li>Stars form in large clouds of gas and dust called nebulae.</li>
+            <li>Gravity pulls the gas together to form dense regions where fusion can begin.</li>
+            <li>Nuclear fusion of hydrogen atoms into helium generates energy and light.</li>
+          </ol>
+        </dd>
+
+        <dt>2. Characteristics of Stars</dt>
+        <dd>
+          <ol>
+            <li><strong>Brightness:</strong> Measured by apparent and absolute magnitude.</li>
+            <li><strong>Color:</strong> Blue stars are hot, red stars are cooler.</li>
+            <li><strong>Mass:</strong> Larger stars burn fuel faster and have shorter lifespans.</li>
+          </ol>
+        </dd>
+
+        <dt>3. Types of Stars</dt>
+        <dd>
+          <ol>
+            <li><strong>Dwarf Stars:</strong> Small stars like the Sun.</li>
+            <li><strong>Giant Stars:</strong> Larger and more luminous than dwarf stars.</li>
+            <li><strong>Supergiants:</strong> The largest and most luminous stars.</li>
+          </ol>
+        </dd>
+
+        <dt>4. Star Evolution</dt>
+        <dd>
+          <ol>
+            <li>Stars begin as protostars, condensing from gas clouds.</li>
+            <li>After hydrogen fuel is exhausted, stars expand into red giants or supergiants.</li>
+            <li>Depending on the star’s mass, it may end as a white dwarf, neutron star, or black hole.</li>
+          </ol>
+        </dd>
+
+        <dt>5. Famous Stars</dt>
+        <dd>
+          <ol>
+            <li><strong>Sirius:</strong> The brightest star in the night sky, located in Canis Major.</li>
+            <li><strong>Betelgeuse:</strong> A red supergiant in the constellation Orion.</li>
+            <li><strong>Proxima Centauri:</strong> The closest star to Earth after the Sun.</li>
+          </ol>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('exploreBtn').addEventListener('click', function() {
+      const mainContent = document.getElementById('mainContent');
+      const button = this;
+      const learnHeader = document.getElementById('learnHeader');
+      const learnText = document.getElementById('learnText');
+      const container = document.getElementById('container');
+
+      if (mainContent.style.display === 'none' || mainContent.style.display === '') {
+        mainContent.style.display = 'block';
+        learnHeader.style.display = 'none';
+        learnText.style.display = 'none';
+        button.innerText = 'Back';
+
+        // تصغير الصفحة
+        container.style.transform = 'scale(0.8)'; // Scale down the container to 80%
+      } else {
+        mainContent.style.display = 'none';
+        learnHeader.style.display = 'block';
+        learnText.style.display = 'block';
+        button.innerText = 'Explore More';
+
+        // إعادة الحجم الطبيعي
+        container.style.transform = 'scale(1)'; // Reset scale to 100%
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        #wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            z-index: 1;
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .content {
+            text-align: left;
+            max-width: 500px;
+            margin-left: 20px;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #00ffcc;
+        }
+
+        .planet-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .planet-info, .planet-info th, .planet-info td {
+            border: 2px solid #00ffcc;
+            padding: 10px;
+            color: white;
+        }
+
+        .planet-info th, .planet-info td {
+            background-color: black;
+        }
+
+        .planet-image img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+        }
+
+        .planet-image {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a id="homeLink" href="index.html">Home</a>
+        <div class="dropdown">
+            <select id="pageSelect" onchange="redirectToPage()">
+                <option>walkthrogh</option>
+                <option value="vid.html">Space Video</option>
+                <option value="earth.html">Earth</option> 
+                <option value="satellite.html">Satellite</option>
+                <option value="Astronaut.html">Astronaut</option>
+                <option value="star.html">Stars Above</option>
+                <option value="feedback.html">Feedback & Insight</option>
+            </select>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="planet-image">
+            <img id="mars-image" src="image/satellite.jpg" alt="Satellite Image"> 
+        </div>
+
+        <div class="content">
+            <h2>Satellite Information</h2>
+            <table class="planet-info">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Artificial Satellite</td>
+                </tr>
+                <tr>
+                    <td>Purpose</td>
+                    <td>Communication, Weather Monitoring, Earth Observation, Navigation</td>
+                </tr>
+                <tr>
+                    <td>First Satellite</td>
+                    <td>Sputnik 1 (Launched in 1957)</td>
+                </tr>
+                <tr>
+                    <td>Common Orbits</td>
+                    <td>Low Earth Orbit (LEO), Geostationary Orbit (GEO)</td>
+                </tr>
+                <tr>
+                    <td>Examples</td>
+                    <td>Hubble Space Telescope, GPS Satellites, Weather Satellites</td>
+                </tr>
+                <tr>
+                    <td>Key Technologies</td>
+                    <td>Radio Communication, Imaging Sensors, Solar Power</td>
+                </tr>
+                <tr>
+                    <td>Current Number of Satellites</td>
+                    <td>Over 3,300 active satellites in orbit</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
